@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase:{
+    apiKey: "AIzaSyAc-cA94yP5jf6Cu-kMAQUbzm8T0hVLpY0",
+    authDomain: "motor-insurance-digital-card.firebaseapp.com",
+    databaseURL: "https://motor-insurance-digital-card.firebaseio.com",
+    projectId: "motor-insurance-digital-card",
+    storageBucket: "motor-insurance-digital-card.appspot.com",
+    messagingSenderId: "252689059213"
+  }
 };
 
 /*
