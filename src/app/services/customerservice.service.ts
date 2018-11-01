@@ -14,6 +14,7 @@ export class CustomerserviceService {
   constructor(public afs: AngularFirestore) {
     this.customers = this.afs.collection('customers').valueChanges();
    }
+   
    getCustomers(){
      return this.customers;
    }

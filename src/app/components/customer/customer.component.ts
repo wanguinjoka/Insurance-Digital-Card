@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { CustomerserviceService } from '../../services/customerservice.service';
 
 
@@ -8,7 +9,7 @@ import { CustomerserviceService } from '../../services/customerservice.service';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-
+    pigdice = "https://annstella.github.io/Pigdice/";
 
   constructor( private customerService: CustomerserviceService) { }
     customers : Customer[];

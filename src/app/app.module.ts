@@ -7,6 +7,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { CustomerComponent } from './components/customer/customer.component';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 import { CustomerserviceService } from './services/customerservice.service';
 
@@ -20,6 +21,7 @@ import { CustomerserviceService } from './services/customerservice.service';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'insurance-digital-card'),
     AngularFirestoreModule,
+    NgxQRCodeModule,
   ],
   providers: [CustomerserviceService],
   bootstrap: [AppComponent]

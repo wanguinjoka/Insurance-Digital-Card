@@ -2,6 +2,9 @@
   customer works!
 </p>
 <div>
+  inpu
+</div>
+<div>
   <ul *ngFor =" let customer of customers">
     <li>{{customer.name}}</li>
     <li>{{customer.policyno }}</li>
@@ -9,5 +12,8 @@
     <li>{{customer.insurance }}</li>
     <li>{{ customer.startdate }}</li>
     <li>{{ customer.expirydate }}</li>
+    <ngx-qrcode qrc-element-type="url" [qrc-value]="pigdice" ></ngx-qrcode>
   </ul>
+ 
 </div>
+
