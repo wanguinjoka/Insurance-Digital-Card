@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-content">
+    <span class = "card-title">Add Customer</span>
+    <form (ngSubmit)="onSubmit()" class ="col s6">
+      <div class="input-field">
+        <input type="text" placeholder="add Name"[(ngModel)]="customer.name" name="name">
+        <label>Name</label>
+      </div>
+      <div class="input-field">
+          <input type="text" placeholder="add Policy No. "[(ngModel)]="customer.policyno" name="policyno">
+          <label>Policy No</label>
+        </div>
+        <div class="input-field">
+            <input type="text" placeholder="add Car Registration"[(ngModel)]="customer.carreg" name="Carreg">
+            <label>Car Registration</label>
+        </div>
+        <div class="input-field">
+            <input type="text" placeholder="add Insurance Company"[(ngModel)]="customer.insurance" name="insurance">
+            <label>Insurance Company</label>
+        </div>
+        <div class="input-field">
+            <input type="text" placeholder="add startdate"[(ngModel)]="customer.startdate" name="startdate">
+            <label>Start Date:</label>
+        </div>
+        <div class="input-field">
+            <input type="text" placeholder="add expirydate"[(ngModel)]="customer.expirydate" name="expirydate">
+            <label>Expiry Date:</label>
+        </div>
+        <input type="submit" value="submit" class="btn">
+    </form>
+  </div>
+</div>
