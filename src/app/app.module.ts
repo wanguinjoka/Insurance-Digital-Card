@@ -7,7 +7,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { CustomerComponent } from './components/customer/customer.component';
-import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { QRCodeModule } from 'angularx-qrcode';
 import { FormsModule } from '@angular/forms';
 import { CustomerserviceService } from './services/customerservice.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -25,7 +25,7 @@ import { AddCustomerComponent } from './components/add-customer/add-customer.com
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    NgxQRCodeModule,
+    QRCodeModule,
     FormsModule
   ],
   providers: [CustomerserviceService],

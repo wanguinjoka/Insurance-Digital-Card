@@ -18,7 +18,7 @@ export class AddCustomerComponent implements OnInit {
     expirydate: '',
   }
   constructor(private customerService: CustomerserviceService) { }
-
+  
   ngOnInit() {
   }
 onSubmit(){
@@ -31,9 +31,10 @@ onSubmit(){
     this.customer.startdate='';
     this.customer.expirydate ='';
   }
+ 
 }
 }
-interface Customer{
+interface Customer {
   id?:string;
   name?:string;
   policyno?: string;

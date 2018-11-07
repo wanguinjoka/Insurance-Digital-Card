@@ -27,6 +27,10 @@
             <label>Expiry Date:</label>
         </div>
         <input type="submit" value="submit" class="btn">
+    
     </form>
+    <button (click)="createCode()">Create QRCode</button>
+    
+    <qrcode [qrdata]="qrdata" [size]="256" [level]="'M'"></qrcode>
   </div>
 </div>

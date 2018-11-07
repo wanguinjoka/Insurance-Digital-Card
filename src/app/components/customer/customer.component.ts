@@ -12,15 +12,16 @@ import {Subject} from 'rxjs/Subject';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-    pigdice = "https://annstella.github.io/Pigdice/";
+    // pigdice = "https://annstella.github.io/Pigdice/";
     
-
+    //  public qrdata: Customer[];
   constructor( private customerService: CustomerserviceService) { }
   customers : Customer[];
   ngOnInit(){
     this.customerService.getCustomers().subscribe(customers => {
       // console.log(customers);
       this.customers = customers;
+      // this.qrdata = customers;
     });
   }
 }
