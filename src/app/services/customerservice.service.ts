@@ -31,6 +31,7 @@ export class CustomerserviceService {
    addCustomer(customer: Customer){
      this.customerCollection.add(customer);
    }
+   
 }
 interface Customer{
   id?:string;

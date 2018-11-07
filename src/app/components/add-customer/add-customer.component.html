@@ -26,11 +26,14 @@
             <input type="text" placeholder="add expirydate"[(ngModel)]="customer.expirydate" name="expirydate">
             <label>Expiry Date:</label>
         </div>
-        <input type="submit" value="submit" class="btn">
+        <input type="submit" value="Generate QRCode" class="btn">
     
     </form>
-    <button (click)="createCode()">Create QRCode</button>
-    
-    <qrcode [qrdata]="qrdata" [size]="256" [level]="'M'"></qrcode>
-  </div>
+    <p>{{qrData}}</p>
+
+    <div *ngIf="createdCode">
+    <qrcode [qrdata]="qrData" [size]="200" [level]="'M'"></qrcode>
+    </div>
+  <div>
+  <p>Value:{{ createdCode }}</p>
 </div>

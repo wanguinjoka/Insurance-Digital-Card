@@ -9,6 +9,10 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./add-customer.component.css']
 })
 export class AddCustomerComponent implements OnInit {
+  qrData:string
+  createdCode:boolean=false;
+
+  
   customer: Customer = {
     name:'',
     policyno: '',
@@ -24,6 +28,15 @@ export class AddCustomerComponent implements OnInit {
 onSubmit(){
   if(this.customer.name != '' && this.customer.carreg != ''){
     this.customerService.addCustomer(this.customer);
+    this.createdCode=true
+    this.qrData= "Customer:"+this.customer.name +"\n" 
+                +"Insurance:"+this.customer.insurance +"\n"
+                +"Policy No:"+this.customer.policyno +"\n"
+                +"Car Reg:"+this.customer.carreg+"\n"
+                +"Start Date:"+this.customer.startdate +"\n"
+                +"Expiry Date:"+this.customer.expirydate +"\n"
+              
+
     this.customer.name ='';
     this.customer.policyno ='';
     this.customer.carreg ='';
