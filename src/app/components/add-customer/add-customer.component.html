@@ -1,39 +1,120 @@
-<div class="card">
-  <div class="card-content">
-    <span class = "card-title">Add Customer</span>
+<div class="header">
+<h1 style="text-align: center; "><span>INSURANCE-DIGITAL-CARD</span></h1>
+    <hr>
+<div class="row">
+    <div class="col-md-7">
+    <div class="header">
+    
+
+
     <form (ngSubmit)="onSubmit()" class ="col s6">
       <div class="input-field">
-        <input type="text" placeholder="add Name"[(ngModel)]="customer.name" name="name">
-        <label>Name</label>
+          <label>Customer Name</label>
+        <input type="text" class="form-control" placeholder="add Name"[(ngModel)]="customer.name" name="name">
+        
       </div>
       <div class="input-field">
-          <input type="text" placeholder="add Policy No. "[(ngModel)]="customer.policyno" name="policyno">
-          <label>Policy No</label>
+            <label>Policy No</label>
+          <input type="text" class="form-control" placeholder="add Policy No. "[(ngModel)]="customer.policyno" name="policyno">
+          
         </div>
         <div class="input-field">
-            <input type="text" placeholder="add Car Registration"[(ngModel)]="customer.carreg" name="Carreg">
-            <label>Car Registration</label>
+                <label>Car Registration</label>
+            <input type="text" class="form-control" placeholder="add Car Registration"[(ngModel)]="customer.carreg" name="Carreg">
+           
         </div>
         <div class="input-field">
-            <input type="text" placeholder="add Insurance Company"[(ngModel)]="customer.insurance" name="insurance">
-            <label>Insurance Company</label>
+                <label>Insurance Company</label>
+            <input type="text" class="form-control" placeholder="add Insurance Company"[(ngModel)]="customer.insurance" name="insurance">
+            
         </div>
         <div class="input-field">
-            <input type="text" placeholder="add startdate"[(ngModel)]="customer.startdate" name="startdate">
-            <label>Start Date:</label>
+                <label>Start Date:</label>
+            <input type="text" class="form-control" placeholder="add startdate"[(ngModel)]="customer.startdate" name="startdate">
+            
         </div>
         <div class="input-field">
-            <input type="text" placeholder="add expirydate"[(ngModel)]="customer.expirydate" name="expirydate">
-            <label>Expiry Date:</label>
+                <label>Expiry Date:</label>
+            <input type="text" class="form-control" placeholder="add expirydate"[(ngModel)]="customer.expirydate" name="expirydate">
+            
         </div>
-        <input type="submit" value="Generate QRCode" class="btn">
+        
+        <input type="submit" value="Generate QRCode" id="submit" class="btn btn-lg">
     
     </form>
-    <p>{{qrData}}</p>
-
-    <div *ngIf="createdCode">
-    <qrcode [qrdata]="qrData" [size]="200" [level]="'M'"></qrcode>
     </div>
-  <div>
-  <p>Value:{{ createdCode }}</p>
-</div>
+    </div>
+    <br><br>
+    <div class="col-md-5">
+    <div class="header">
+            <p>Value:{{ createdCode }}</p>
+        <div *ngIf="createdCode">
+            <qrcode [qrdata]="qrData" [size]="200" [level]="'M'"></qrcode>
+        </div>
+        <div>
+            <p>{{qrData}}</p>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+<style>
+    .header{
+        background-color:  rgba( 255, 255, 255 ,0.7);
+        color: black;
+        border-radius: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    #submit {
+    outline: none;
+    padding: 12px;
+    min-width: 200px;
+    border-radius: 2px;
+    border: 2px solid blue;
+    text-align: center;
+    font-size: 1em;
+    color:blue;
+    background-color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  #submit:hover {
+    background-color: blue;
+    color: white;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .form-control {
+    border: 2px solid rgba(0, 0, 0, 0.27);
+    width: 80%;
+    max-width: 80%;
+    height: 3em;
+    font-size: 16px;
+    padding: 1em;
+    margin: .5em 0 2em 0;
+    font-weight: bold;
+  }
+  textarea {
+    min-height: 5em;
+  }
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+</style>
+
+

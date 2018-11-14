@@ -1,6 +1,7 @@
 
  <div *ngIf="customers?.length > 0; else noCustomers">
     <ul *ngFor =" let customer of customers">
+      
         <li>{{customer.id}}</li>
         <li>{{customer.name}}</li>
         <li>{{customer.policyno }}</li>
@@ -8,8 +9,8 @@
         <li>{{customer.insurance }}</li>
         <li>{{ customer.startdate }}</li>
         <li>{{ customer.expirydate }}</li>
-        
-        <qrcode [qrdata]="qrdata" [size]="256" [level]="'M'"></qrcode>
+    
+        <!-- <qrcode [qrdata]="qrdata" [size]="256" [level]="'M'"></qrcode> -->
       </ul>
     </div>
     <ng-template #noCustomers>

@@ -29,7 +29,7 @@ onSubmit(){
   if(this.customer.name != '' && this.customer.carreg != ''){
     this.customerService.addCustomer(this.customer);
     this.createdCode=true
-    this.qrData= "Customer:"+this.customer.name +"\n" 
+    this.qrData= "Customer Name:"+this.customer.name +"\n" 
                 +"Insurance:"+this.customer.insurance +"\n"
                 +"Policy No:"+this.customer.policyno +"\n"
                 +"Car Reg:"+this.customer.carreg+"\n"
